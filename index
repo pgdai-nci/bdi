@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal & Bloom - Flower Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Petal & Bloom</h1>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#products">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="cart-btn" id="cartBtn">
+                Cart (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Fresh Flowers for Every Occasion</h2>
+            <p>Hand-picked blooms delivered to your doorstep</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Flowers</h2>
+            <div class="filter-btns">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="roses">Roses</button>
+                <button class="filter-btn" data-filter="lilies">Lilies</button>
+                <button class="filter-btn" data-filter="tulips">Tulips</button>
+                <button class="filter-btn" data-filter="mixed">Mixed</button>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Petal & Bloom, we believe every bouquet tells a story. Since 2015, we've been crafting arrangements that capture life's most precious moments.</p>
+                    <p>Our flowers are sourced directly from local farms, ensuring freshness and supporting our community.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <h3>Fresh Guarantee</h3>
+                        <p>Flowers guaranteed fresh for 7 days</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Same Day Delivery</h3>
+                        <p>Order before 2pm for same day delivery</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Custom Arrangements</h3>
+                        <p>Tailored designs for your special events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Petal & Bloom. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <p>Total: $<span id="cartTotal">0.00</span></p>
+                <button class="btn" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
